@@ -1,0 +1,176 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .contenedor {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .encabezado {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            color: #FFD700;
+        }
+        
+        .info-juego {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .caja-info {
+            text-align: center;
+        }
+        
+        .caja-info h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #FFD700;
+        }
+        
+        .caja-info p {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .contenedor-pregunta {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .pregunta {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .opciones {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .opcion {
+            background: rgba(0, 60, 136, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .opcion:hover {
+            background: rgba(0, 80, 180, 0.9);
+            transform: translateY(-3px);
+        }
+        
+        .opcion.correcta {
+            background: #2E8B57;
+        }
+        
+        .opcion.incorrecta {
+            background: #B22222;
+        }
+        
+        .controles {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            background: #FFD700;
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #FFA500;
+            transform: scale(1.05);
+        }
+        
+        .resultado {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .resultado h2 {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+        
+        .resultado p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .barra-progreso {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progreso {
+            height: 100%;
+            background: #FFD700;
+            width: 0%;
+            transition: width 0.5s;
+        }
+        
+        @media (max-width: 600px) {
+            .opciones {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .pregunta {
+                font-size: 1.2rem;
+            }
+        }
+    
