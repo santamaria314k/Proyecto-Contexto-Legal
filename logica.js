@@ -138,3 +138,21 @@ opciones.forEach(opcion => {
 botonSiguiente.addEventListener('click', siguientePregunta);
 botonReiniciar.addEventListener('click', iniciarJuego);
 window.onload = iniciarJuego;
+
+
+
+// Función para intentar reproducir el audio
+  function intentarReproducirAudio() {
+    var audio = document.getElementById('musicaDeFondo');
+    if (audio.paused) { 
+      audio.play().catch(error => {
+        console.log("La reproducción automática sigue bloqueada incluso después del clic.");
+      });
+    }
+  }
+
+ 
+  document.addEventListener('click', intentarReproducirAudio);
+
+
+
