@@ -146,7 +146,7 @@ window.onload = iniciarJuego;
     var audio = document.getElementById('musicaDeFondo');
     if (audio.paused) { 
       audio.play().catch(error => {
-        console.log("La reproducción automática sigue bloqueada incluso después del clic.");
+        console.log("La reproduccion automatica esta bloqueada -> después del clic ..");
       });
     }
   }
