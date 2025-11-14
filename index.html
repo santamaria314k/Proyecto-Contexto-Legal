@@ -3,71 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forecast 2030</title>
-    
-<link rel="stylesheet" href="style.css">
-
-
-
-
+    <title>Login - Forecast 2030</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="contenedor">
+    <div class="contenedor-login">
         <div class="encabezado">
             <h1>Forecast 2030</h1>
-            <p>Responde correctamente a las preguntas y gana puntos  :)</p>
+            <p>Ingresa tus credenciales para jugar</p>
         </div>
         
-        <div class="info-juego">
-            <div class="caja-info">
-                <h3>PREGUNTA</h3>
-                <p id="contador-preguntas">1/5</p>
+        <form id="formulario-login">
+            <div class="campo-formulario">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
             </div>
-            <div class="caja-info">
-                <h3>PUNTUACIÓN</h3>
-                <p id="puntuacion">0</p>
+            <div class="campo-formulario">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
             </div>
-            <div class="caja-info">
-                <h3>PORCENTAJE</h3>
-                <p id="porcentaje">0%</p>
-            </div>
-        </div>
+            <button type="submit">Ingresar</button>
+        </form>
         
-        <div class="barra-progreso">
-            <div class="progreso" id="barra-progreso"></div>
-        </div>
-        
-        <div class="contenedor-pregunta">
-            <div class="pregunta" id="texto-pregunta">¿yo soy una pregunta por defecto ?</div>
-            <div class="opciones">
-                
-                <div class="opcion" data-opcion="A">A) op1</div>
-                <div class="opcion" data-opcion="B">B) op2</div>
- 
-            </div>
-        </div>
-        
-        <div class="controles">
-            <button id="boton-siguiente">Siguiente Pregunta</button>
-        </div>
-        
-        <div class="resultado" id="resultado">
-            <h2>¡Juego Terminado!</h2>
-            <p id="puntuacion-final">Puntuación final: 0</p>
-            <p id="puntuacion-promedio">Porcentaje de aciertos: 0%</p>
-            <button id="boton-reiniciar">Jugar de Nuevo</button>
+        <div id="mensaje-error" class="mensaje-error" style="display: none;">
+            Usuario o contraseña incorrectos.
         </div>
     </div>
 
+<script  src="login.js"></script>
 
-<script  src="logica.js">
-
-</script>
-    
-<audio autoplay loop id="musicaDeFondo">
-    <source src="holamundo.mp3" type="audio/mpeg">
-</audio>
-
-    
 </body>
 </html>

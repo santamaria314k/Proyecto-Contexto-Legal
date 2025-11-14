@@ -1,3 +1,4 @@
+
 const preguntas = [
     {
         pregunta: "Tu empresa crea una IA capaz de generar emociones humanas. ¿Qué haces?",
@@ -141,7 +142,12 @@ window.onload = iniciarJuego;
 
 
 
-// Función para intentar reproducir el audio
+
+
+
+
+
+// Función para  reproducir el audio
   function intentarReproducirAudio() {
     var audio = document.getElementById('musicaDeFondo');
     if (audio.paused) { 
@@ -150,9 +156,8 @@ window.onload = iniciarJuego;
       });
     }
   }
-
- 
   document.addEventListener('click', intentarReproducirAudio);
+
 
 
 
